@@ -1,0 +1,43 @@
+﻿Build started 2/20/2014 9:50:08 AM.
+     1>Project "J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\Colony.vcxproj" on node 4 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\\include" /I..\.\\DXUT\\Core /I..\.\\DXUT\\Optional /I..\.\SampleComponents /I..\.\SampleComponents\Middleware\TBB\include /Zi /nologo /W4 /WX- /Od /Oi /Oy- /D _WINDOWS /D WIN32 /D _DEBUG /D DEBUG /D D3DXFX_LARGEADDRESS_HANDLE /D _VC80_UPGRADE=0x0710 /D _UNICODE /D UNICODE /Gm /EHsc /MTd /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /Fo"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\\" /Fd"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Colony.cpp Game.cpp Render.cpp UnitManager.cpp /IGNORE:4089 /IGNORE:4099 
+         UnitManager.cpp
+         Render.cpp
+         Game.cpp
+         Colony.cpp
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.exe.embed.manifest.res" J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\\lib\\x86" /LIBPATH:..\.\SampleComponents\Middleware\TBB\lib\x86\Debug winmm.lib comctl32.lib pdh.lib version.lib d3dx11d.lib d3dx9d.lib d3dcompiler.lib dxerr.lib dxguid.lib d3d9.lib dxgi.lib d3d10.lib TBBGraphicsSamples.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\Win32\Debug\Colony.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /OPT:NOREF /OPT:NOICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony.lib" /MACHINE:X86 J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.exe.embed.manifest.res
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Game.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Render.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\UnitManager.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\bin\Win32\DXUT\Debug\DXUT.lib
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\bin\Win32\DXUTOpt\Debug\DXUTOpt.lib
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\bin\Win32\SampleComponents\Debug\SampleComponents.lib /IGNORE:4089 /IGNORE:4099 
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.exe.embed.manifest" /manifest J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.exe.embed.manifest.res" J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\\lib\\x86" /LIBPATH:..\.\SampleComponents\Middleware\TBB\lib\x86\Debug winmm.lib comctl32.lib pdh.lib version.lib d3dx11d.lib d3dx9d.lib d3dcompiler.lib dxerr.lib dxguid.lib d3d9.lib dxgi.lib d3d10.lib TBBGraphicsSamples.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\Win32\Debug\Colony.pdb" /SUBSYSTEM:WINDOWS /LARGEADDRESSAWARE /OPT:NOREF /OPT:NOICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony.lib" /MACHINE:X86 J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.exe.embed.manifest.res
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Game.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Render.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\UnitManager.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\bin\Win32\DXUT\Debug\DXUT.lib
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\bin\Win32\DXUTOpt\Debug\DXUTOpt.lib
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\bin\Win32\SampleComponents\Debug\SampleComponents.lib /IGNORE:4089 /IGNORE:4099 
+         Colony.vcxproj -> J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony.exe
+       FinalizeBuildStatus:
+         Deleting file "J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.unsuccessfulbuild".
+         Touching "J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\\Win32\Debug\Colony\Colony.lastbuildstate".
+     1>Done Building Project "J:\PortableApps\Documents\Academic\GED\Colony_Source\Colony\Colony.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.34
