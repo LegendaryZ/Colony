@@ -1,0 +1,39 @@
+﻿Build started 2/20/2014 9:49:59 AM.
+     1>Project "J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\DXUTOpt_2010.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\bin\Win32\DXUTOpt\Debug\".
+       InitializeBuildStatus:
+         Creating "J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTOpt.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\Core\ /I..\..\\Core /I..\..\\Optional /I/include /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D _LIB /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MTd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Fo"J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\\" /Fd"J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DXUTcamera.cpp DXUTgui.cpp DXUTguiIME.cpp DXUTres.cpp DXUTsettingsdlg.cpp ImeUi.cpp SDKmesh.cpp SDKmisc.cpp SDKsound.cpp SDKwavefile.cpp  
+         DXUTcamera.cpp
+         DXUTgui.cpp
+         DXUTguiIME.cpp
+         DXUTres.cpp
+         DXUTsettingsdlg.cpp
+         ImeUi.cpp
+         SDKmesh.cpp
+         SDKmisc.cpp
+         SDKsound.cpp
+         SDKwavefile.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\bin\Win32\DXUTOpt\Debug\DXUTOpt.lib" /NOLOGO J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTcamera.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTgui.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTguiIME.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTres.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTsettingsdlg.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\ImeUi.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKmesh.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKmisc.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKsound.obj
+         J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKwavefile.obj
+         DXUTOpt_2010.vcxproj -> J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\bin\Win32\DXUTOpt\Debug\DXUTOpt.lib
+       FinalizeBuildStatus:
+         Deleting file "J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTOpt.unsuccessfulbuild".
+         Touching "J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTOpt.lastbuildstate".
+     1>Done Building Project "J:\PortableApps\Documents\Academic\GED\Colony_Source\DXUT\Optional\DXUTOpt_2010.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.64
