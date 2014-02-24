@@ -25,12 +25,12 @@
 static const unsigned int   gs_nWorldSize = 512;    // Size of the world
 static const unsigned int   gs_nWorldSizeSq = gs_nWorldSize * gs_nWorldSize;    // Size of the world
 static const unsigned int   gs_nMaxUnits = 1024 * 128; // Max number of units ( 128k )
-static const unsigned int   gs_nMaxFactories = 128; // Max number of factories
+static const unsigned int   gs_nMaxFactories = 8; // Max number of factories
 
 
 static const float          gs_fCoveragePerTile = 1.0f / gs_nWorldSizeSq;
 
-static const unsigned int   gs_nTreeGranularity = 8;
+static const unsigned int   gs_nTreeGranularity = 16;
 static const unsigned int   gs_nTreeCount = gs_nWorldSizeSq / gs_nTreeGranularity;
 
 static const unsigned int   gs_nTargetFPS = 30;
@@ -44,7 +44,7 @@ static const unsigned int   gs_nBinCount = ( gs_nWorldSize / gs_nBinSize );
 static const unsigned int   gs_nBinCountSq = gs_nBinCount * gs_nBinCount;
 static const unsigned int   gs_nBinCapacity = 2048;
 static const unsigned int   gs_nTBBTaskCount = 64;
-static const unsigned int   gs_nStartingUnits = 64 * 1024 / gs_nSIMDWidth;
+static const unsigned int   gs_nStartingUnits = 16 * 1024 / gs_nSIMDWidth;
 
 // Rendering sizes
 static const float          gs_fUnitSize = 0.0212f;      // Units are 0.0212x0.0212 in size

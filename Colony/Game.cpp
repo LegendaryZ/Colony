@@ -152,19 +152,19 @@ void Game::Reset( void )
 void Game::Render( void )
 {
     // Factories
-    Render::DrawInstanced( m_pFactoryMatrices, FACTORY_MESH, m_nNumActiveFactories, false );
+    Render::DrawInstanced( m_pFactoryMatrices, FACTORY_MESH, m_nNumActiveFactories, false, true, ColorFilter::RED );
 
     // Trees
     if( g_bRenderTrees )
     {
-        Render::DrawInstanced( m_pActiveTreeMatrices, TREE_MESH, m_nNumActiveTrees );
-        Render::DrawInstanced( m_pInactiveTreeMatrices, TREE_MESH, m_nNumInactiveTrees );
+        Render::DrawInstanced( m_pActiveTreeMatrices, TREE_MESH, m_nNumActiveTrees, true, true, ColorFilter::PURPLE );
+        Render::DrawInstanced( m_pInactiveTreeMatrices, TREE_MESH, m_nNumInactiveTrees, true, true, ColorFilter::CYAN );
     }
 
     // Units
     Render::DrawInstanced( m_UnitManager.GetTransforms(),
                            UNIT_MESH,
-                           m_UnitManager.GetNumUnits() );
+                           m_UnitManager.GetNumUnits(), true, true, ColorFilter::YELLOW );
 
     // Terrain
     Render::DrawTerrain( m_pTileMatrices, m_nNumActiveTiles );

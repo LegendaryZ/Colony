@@ -88,6 +88,147 @@ float4 PS( PS_INPUT Input ) : SV_TARGET
     return float4( diffuse, texColor.a );
 }
 
+float4 PS_RED( PS_INPUT Input ) : SV_TARGET
+{
+    // light
+    float3 lightColor = float3( 1.0f, 1.0f, 1.0f );
+    float3 lightDir = float3( -1.0f, -1.0f, 0.0f );
+    float3 lightVec = -lightDir;
+
+    // texture
+    float4 texColor = DiffuseTexture.Sample(DiffuseTextureSampler, Input.TexCoord) * float4(1.0, 0.0, 0.0, 1.0);
+
+    // increase color saturation
+    lightColor = increase_saturation( texColor.rgb );
+    
+    // diffuse
+    float ndotl = max( dot( lightVec, Input.Normal.xyz ), 0.05f ); 
+    float3 diffuse = ndotl * texColor.rgb * lightColor;
+
+    return float4( diffuse, texColor.a );
+}
+
+float4 PS_GREEN( PS_INPUT Input ) : SV_TARGET
+{
+    // light
+    float3 lightColor = float3( 1.0f, 1.0f, 1.0f );
+    float3 lightDir = float3( -1.0f, -1.0f, 0.0f );
+    float3 lightVec = -lightDir;
+
+    // texture
+    float4 texColor = DiffuseTexture.Sample(DiffuseTextureSampler, Input.TexCoord) * float4(0.0, 1.0, 0.0, 1.0);
+
+    // increase color saturation
+    lightColor = increase_saturation( texColor.rgb );
+    
+    // diffuse
+    float ndotl = max( dot( lightVec, Input.Normal.xyz ), 0.05f ); 
+    float3 diffuse = ndotl * texColor.rgb * lightColor;
+
+    return float4( diffuse, texColor.a );
+}
+
+float4 PS_BLUE( PS_INPUT Input ) : SV_TARGET
+{
+    // light
+    float3 lightColor = float3( 1.0f, 1.0f, 1.0f );
+    float3 lightDir = float3( -1.0f, -1.0f, 0.0f );
+    float3 lightVec = -lightDir;
+
+    // texture
+    float4 texColor = DiffuseTexture.Sample(DiffuseTextureSampler, Input.TexCoord) * float4(0.0, 0.0, 1.0, 1.0);
+
+    // increase color saturation
+    lightColor = increase_saturation( texColor.rgb );
+    
+    // diffuse
+    float ndotl = max( dot( lightVec, Input.Normal.xyz ), 0.05f ); 
+    float3 diffuse = ndotl * texColor.rgb * lightColor;
+
+    return float4( diffuse, texColor.a );
+}
+
+float4 PS_PURPLE( PS_INPUT Input ) : SV_TARGET
+{
+    // light
+    float3 lightColor = float3( 1.0f, 1.0f, 1.0f );
+    float3 lightDir = float3( -1.0f, -1.0f, 0.0f );
+    float3 lightVec = -lightDir;
+
+    // texture
+    float4 texColor = DiffuseTexture.Sample(DiffuseTextureSampler, Input.TexCoord) * float4(1.0, 0.0, 1.0, 1.0);
+
+    // increase color saturation
+    lightColor = increase_saturation( texColor.rgb );
+    
+    // diffuse
+    float ndotl = max( dot( lightVec, Input.Normal.xyz ), 0.05f ); 
+    float3 diffuse = ndotl * texColor.rgb * lightColor;
+
+    return float4( diffuse, texColor.a );
+}
+
+float4 PS_YELLOW( PS_INPUT Input ) : SV_TARGET
+{
+    // light
+    float3 lightColor = float3( 1.0f, 1.0f, 1.0f );
+    float3 lightDir = float3( -1.0f, -1.0f, 0.0f );
+    float3 lightVec = -lightDir;
+
+    // texture
+    float4 texColor = DiffuseTexture.Sample(DiffuseTextureSampler, Input.TexCoord) * float4(1.0, 1.0, 0.0, 1.0);
+
+    // increase color saturation
+    lightColor = increase_saturation( texColor.rgb );
+    
+    // diffuse
+    float ndotl = max( dot( lightVec, Input.Normal.xyz ), 0.05f ); 
+    float3 diffuse = ndotl * texColor.rgb * lightColor;
+
+    return float4( diffuse, texColor.a );
+}
+
+float4 PS_CYAN( PS_INPUT Input ) : SV_TARGET
+{
+    // light
+    float3 lightColor = float3( 1.0f, 1.0f, 1.0f );
+    float3 lightDir = float3( -1.0f, -1.0f, 0.0f );
+    float3 lightVec = -lightDir;
+
+    // texture
+    float4 texColor = DiffuseTexture.Sample(DiffuseTextureSampler, Input.TexCoord) * float4(0.0, 1.0, 1.0, 1.0);
+
+    // increase color saturation
+    lightColor = increase_saturation( texColor.rgb );
+    
+    // diffuse
+    float ndotl = max( dot( lightVec, Input.Normal.xyz ), 0.05f ); 
+    float3 diffuse = ndotl * texColor.rgb * lightColor;
+
+    return float4( diffuse, texColor.a );
+}
+
+
+float4 PS_BLACK( PS_INPUT Input ) : SV_TARGET
+{
+    // light
+    float3 lightColor = float3( 1.0f, 1.0f, 1.0f );
+    float3 lightDir = float3( -1.0f, -1.0f, 0.0f );
+    float3 lightVec = -lightDir;
+
+    // texture
+    float4 texColor = DiffuseTexture.Sample(DiffuseTextureSampler, Input.TexCoord) * float4(0.0, 0.0, 0.0, 1.0);
+
+    // increase color saturation
+    lightColor = increase_saturation( texColor.rgb );
+    
+    // diffuse
+    float ndotl = max( dot( lightVec, Input.Normal.xyz ), 0.05f ); 
+    float3 diffuse = ndotl * texColor.rgb * lightColor;
+
+    return float4( diffuse, texColor.a );
+}
+
 // Sky
 float4 PS_Sky( PS_INPUT Input ) : SV_TARGET
 {

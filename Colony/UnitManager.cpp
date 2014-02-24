@@ -122,9 +122,9 @@ void UnitManager::Reset( void )
 void UnitManager::Update( float fElapsedTime )
 {
     // We use a "fluid" unit count to help average out frame time spikes with regards to unit count
-    m_nNumUnits = ( int )( ( m_nNumUnits * 0.95f ) + ( m_nFluidNumUnits * 0.05f ) );
-    m_nNumUnits = min( gs_nUnitTaskCount, m_nNumUnits );
-    m_nNumUnits = max( m_nNumUnits, 0 );
+    //m_nNumUnits = ( int )( ( m_nNumUnits * 0.95f ) + ( m_nFluidNumUnits * 0.05f ) );
+    //m_nNumUnits = min( gs_nUnitTaskCount, m_nNumUnits );
+    //m_nNumUnits = max( m_nNumUnits, 0 );
     m_fElapsedTime = fElapsedTime;
 
     // The task handles
