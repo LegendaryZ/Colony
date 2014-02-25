@@ -160,11 +160,18 @@ public:
     static void DrawInstanced( XMMATRIX* pTransforms,
                                MeshType Type,
                                unsigned int nInstanceCount,
+<<<<<<< HEAD
                                bool bUpdateTransforms = true,
                                bool bCullObjects = true, 
 							   ColorFilter filter = ColorFilter::WHITE);
     static void DrawTerrain( XMMATRIX* pTransforms,
                              unsigned int nInstanceCount );
+=======
+                               bool bUpdateTransforms,
+                               bool bCullObjects, 
+							   ColorFilter filter = ColorFilter::WHITE);
+    static void DrawTerrain( void );
+>>>>>>> b561bf0b9d813c3849199d2267141d1bba01da47
     static void DrawSky( void );
     static void Destroy( void );
 };

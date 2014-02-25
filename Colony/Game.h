@@ -77,6 +77,14 @@ private:
 
     // Rendering data
     XMMATRIX m_pTileMatrices[ gs_nWorldSizeSq ];
+	XMMATRIX m_pTileMatricesRed[ gs_nWorldSizeSq ];
+	XMMATRIX m_pTileMatricesBlue[ gs_nWorldSizeSq ];
+	XMMATRIX m_pTileMatricesGreen[ gs_nWorldSizeSq ];
+	XMMATRIX m_pTileMatricesPurple[ gs_nWorldSizeSq ];
+	XMMATRIX m_pTileMatricesYellow[ gs_nWorldSizeSq ];
+	XMMATRIX m_pTileMatricesCyan[ gs_nWorldSizeSq ];
+	XMMATRIX m_pTileMatricesBlack[ gs_nWorldSizeSq ];
+
     XMMATRIX m_pFactoryMatrices[ gs_nMaxFactories ];
     XMMATRIX m_pActiveTreeMatrices[ gs_nTreeCount ];
     XMMATRIX m_pInactiveTreeMatrices[ gs_nTreeCount ];
@@ -86,6 +94,13 @@ private:
 
     CRITICAL_SECTION m_CriticalSection;// The critical section for safely activating a tile
     volatile long m_nNumActiveTiles;      // The number of active tiles and matrices
+	volatile long m_nNumActiveTilesRed;      // The number of active tiles and matrices
+	volatile long m_nNumActiveTilesBlue;      // The number of active tiles and matrices
+	volatile long m_nNumActiveTilesGreen;      // The number of active tiles and matrices
+	volatile long m_nNumActiveTilesPurple;      // The number of active tiles and matrices
+	volatile long m_nNumActiveTilesCyan;      // The number of active tiles and matrices
+	volatile long m_nNumActiveTilesYellow;      // The number of active tiles and matrices
+	volatile long m_nNumActiveTilesBlack;      // The number of active tiles and matrices
     volatile long m_nNumInactiveTiles;    // The number of inactive tiles
     volatile long m_nNumActiveTrees;      // The number of rendered trees
     int m_nNumInactiveTrees;    // The number of out of bounds trees

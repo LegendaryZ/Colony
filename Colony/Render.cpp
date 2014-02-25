@@ -394,8 +394,11 @@ void Render::DrawInstanced( XMMATRIX* pTransforms,
     m_pContext->IASetPrimitiveTopology( D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST );
     m_pContext->IASetInputLayout( m_pInputLayout );
     m_pContext->VSSetShader( m_pVertexShader, NULL, 0 );
+<<<<<<< HEAD
 	
 	//Color filters
+=======
+>>>>>>> b561bf0b9d813c3849199d2267141d1bba01da47
 	switch(filter)
 	{
 	case ColorFilter::WHITE:
@@ -483,13 +486,10 @@ void Render::DrawInstanced( XMMATRIX* pTransforms,
     }
 }
 
-void Render::DrawTerrain( XMMATRIX* pTransforms,
-                          unsigned int nInstanceCount )
+void Render::DrawTerrain( )
 {
     GPA_SCOPED_TASK( __FUNCTION__, s_pRenderDomain );
 
-    // Draw the concrete first
-    DrawInstanced( pTransforms, CONCRETE_MESH, nInstanceCount, true, false );
 
     // Then draw
     ColonyMesh* pInstancedMesh = m_pMeshes[GRASS_MESH];
