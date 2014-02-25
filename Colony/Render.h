@@ -20,6 +20,18 @@
 // The maximum objects rendered per draw call
 static const unsigned int   gs_nMaxPerDraw = max( gs_nWorldSizeSq, gs_nMaxUnits );
 
+enum ColorFilter
+{
+	WHITE = 20,
+	RED,
+	GREEN,
+	BLUE,
+	PURPLE,
+	YELLOW,
+	CYAN,
+	BLACK
+};
+
 enum MeshType
 {
     UNIT_MESH = 0,
@@ -131,6 +143,13 @@ private:
     static ID3D11InputLayout* m_pInputLayout;
     static ID3D11VertexShader* m_pVertexShader;
     static ID3D11PixelShader* m_pPixelShader;
+	static ID3D11PixelShader* m_pPixelShaderRED;
+	static ID3D11PixelShader* m_pPixelShaderGREEN;
+	static ID3D11PixelShader* m_pPixelShaderBLUE;
+	static ID3D11PixelShader* m_pPixelShaderPURPLE;
+	static ID3D11PixelShader* m_pPixelShaderYELLOW;
+	static ID3D11PixelShader* m_pPixelShaderCYAN;
+	static ID3D11PixelShader* m_pPixelShaderBLACK;
     static ID3D11PixelShader* m_pSkyPixelShader;
 
 public:
@@ -141,10 +160,10 @@ public:
     static void DrawInstanced( XMMATRIX* pTransforms,
                                MeshType Type,
                                unsigned int nInstanceCount,
-                               bool bUpdateTransforms = true,
-                               bool bCullObjects = true );
-    static void DrawTerrain( XMMATRIX* pTransforms,
-                             unsigned int nInstanceCount );
+                               bool bUpdateTransforms,
+                               bool bCullObjects, 
+							   ColorFilter filter = ColorFilter::WHITE);
+    static void DrawTerrain( void );
     static void DrawSky( void );
     static void Destroy( void );
 };

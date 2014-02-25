@@ -122,9 +122,9 @@ void UnitManager::Reset( void )
 void UnitManager::Update( float fElapsedTime )
 {
     // We use a "fluid" unit count to help average out frame time spikes with regards to unit count
-    m_nNumUnits = ( int )( ( m_nNumUnits * 0.95f ) + ( m_nFluidNumUnits * 0.05f ) );
-    m_nNumUnits = min( gs_nUnitTaskCount, m_nNumUnits );
-    m_nNumUnits = max( m_nNumUnits, 0 );
+    //m_nNumUnits = ( int )( ( m_nNumUnits * 0.95f ) + ( m_nFluidNumUnits * 0.05f ) );
+    //m_nNumUnits = min( gs_nUnitTaskCount, m_nNumUnits );
+    //m_nNumUnits = max( m_nNumUnits, 0 );
     m_fElapsedTime = fElapsedTime;
 
     // The task handles
@@ -245,8 +245,8 @@ void UnitManager::UnitLogic( unsigned int nUnit )
                 else
                 {
                     // The tile was paved, back to your base
-                    unsigned int nIndex = m_pGame->GetFactories()[ ( nUnit + nLane ) % gs_nMaxFactories ];
-
+                    //unsigned int nIndex = m_pGame->GetFactories()[ ( nUnit + nLane ) % gs_nMaxFactories ];
+					unsigned int nIndex = m_pGame->GetFactories()[ (int)floor(7.0 * (nUnit / (float)m_nNumUnits))];
                     m_UnitSharedData[nUnit].fGoalPositionX[nLane] = m_pGame->GetTiles()[ nIndex ].fX;
                     m_UnitSharedData[nUnit].fGoalPositionY[nLane] = m_pGame->GetTiles()[ nIndex ].fY;
                     m_UnitUpdate[nUnit].nGoalIndex[nLane] = nIndex;

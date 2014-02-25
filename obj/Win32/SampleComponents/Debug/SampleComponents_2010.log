@@ -1,11 +1,9 @@
-﻿Build started 2/20/2014 9:49:59 AM.
-     1>Project "J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\SampleComponents_2010.vcxproj" on node 4 (build target(s)).
-     1>PrepareForBuild:
-         Creating directory "J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\bin\Win32\SampleComponents\Debug\".
-       InitializeBuildStatus:
-         Creating "J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.unsuccessfulbuild" because "AlwaysCreate" was specified.
+﻿Build started 2/24/2014 3:02:18 PM.
+     1>Project "\\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\SampleComponents_2010.vcxproj" on node 4 (rebuild target(s)).
+     1>InitializeBuildStatus:
+         Creating "\\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\include" /I.\middleware\tbb\include /I..\DXUT\Core /I..\DXUT\Optional /ZI /nologo /W3 /WX- /Od /Oy- /D VS2010 /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\\" /Fd"J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ContactUI.cpp CPUUsage.cpp CPUUsageUI.cpp HelpUI.cpp TaskMgrTBB.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\include" /I.\middleware\tbb\include /I..\DXUT\Core /I..\DXUT\Optional /ZI /nologo /W3 /WX- /Od /Oy- /D VS2010 /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"\\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\\" /Fd"\\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ContactUI.cpp CPUUsage.cpp CPUUsageUI.cpp HelpUI.cpp TaskMgrTBB.cpp
          TaskMgrTBB.cpp
          HelpUI.cpp
          CPUUsageUI.cpp
@@ -13,20 +11,20 @@
          ContactUI.cpp
          Generating Code...
        ResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactDialog.res" ContactDialog.rc 
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"\\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactDialog.res" ContactDialog.rc 
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\bin\Win32\SampleComponents\Debug\SampleComponents.lib" /NOLOGO /MACHINE:X86 J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactDialog.res
-         J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactUI.obj
-         J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\CPUUsage.obj
-         J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\CPUUsageUI.obj
-         J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\HelpUI.obj
-         J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\TaskMgrTBB.obj
-         SampleComponents_2010.vcxproj -> J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\bin\Win32\SampleComponents\Debug\SampleComponents.lib
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"\\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\bin\Win32\SampleComponents\Debug\SampleComponents.lib" /NOLOGO /MACHINE:X86 \\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactDialog.res
+         \\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactUI.obj
+         \\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\CPUUsage.obj
+         \\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\CPUUsageUI.obj
+         \\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\HelpUI.obj
+         \\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\TaskMgrTBB.obj
+         SampleComponents_2010.vcxproj -> \\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\bin\Win32\SampleComponents\Debug\SampleComponents.lib
        FinalizeBuildStatus:
-         Deleting file "J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.unsuccessfulbuild".
-         Touching "J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.lastbuildstate".
-     1>Done Building Project "J:\PortableApps\Documents\Academic\GED\Colony_Source\SampleComponents\SampleComponents_2010.vcxproj" (build target(s)).
+         Deleting file "\\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.unsuccessfulbuild".
+         Touching "\\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.lastbuildstate".
+     1>Done Building Project "\\banner.main.ad.rit.edu\students\jmm3896\IGMProfile\Desktop\GitHub\Colony\SampleComponents\SampleComponents_2010.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:07.39
+Time Elapsed 00:00:15.90

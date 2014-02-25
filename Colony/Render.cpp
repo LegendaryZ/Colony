@@ -29,6 +29,13 @@ ID3D11DeviceContext*        Render::m_pContext = NULL;
 ID3D11InputLayout*          Render::m_pInputLayout = NULL;
 ID3D11VertexShader*         Render::m_pVertexShader = NULL;
 ID3D11PixelShader*          Render::m_pPixelShader = NULL;
+ID3D11PixelShader*          Render::m_pPixelShaderRED = NULL;
+ID3D11PixelShader*          Render::m_pPixelShaderGREEN = NULL;
+ID3D11PixelShader*          Render::m_pPixelShaderBLUE = NULL;
+ID3D11PixelShader*          Render::m_pPixelShaderPURPLE = NULL;
+ID3D11PixelShader*          Render::m_pPixelShaderYELLOW = NULL;
+ID3D11PixelShader*          Render::m_pPixelShaderCYAN = NULL;
+ID3D11PixelShader*          Render::m_pPixelShaderBLACK = NULL;
 ID3D11PixelShader*          Render::m_pSkyPixelShader = NULL;
 XMVECTOR                    Render::m_vCamPos = XMVectorSet( 0.0f, 0.0f, 0.0f, 0.0f );
 XMVECTOR                    Render::m_vCamDir = XMVectorSet( 0.0f, 0.0f, 0.0f, 0.0f );
@@ -290,11 +297,46 @@ HRESULT Render::Init()
     V_RETURN( m_pDevice->CreateVertexShader( pVSBlob->GetBufferPointer(), pVSBlob->GetBufferSize(),
                                              NULL, &m_pVertexShader ) );
 
-    // define pixel shader
+    // define pixel shaders
     V_RETURN( D3DX11CompileFromFile( sFilename, NULL, NULL, "PS", "ps_4_0", D3DCOMPILE_ENABLE_STRICTNESS, NULL,
                                      NULL, &pPSBlob, &pErrBlob, NULL ) );
     V_RETURN( m_pDevice->CreatePixelShader( pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(),
                                             NULL, &m_pPixelShader ) );
+
+	V_RETURN( D3DX11CompileFromFile( sFilename, NULL, NULL, "PS_RED", "ps_4_0", D3DCOMPILE_ENABLE_STRICTNESS, NULL,
+                                     NULL, &pPSBlob, &pErrBlob, NULL ) );
+    V_RETURN( m_pDevice->CreatePixelShader( pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(),
+                                            NULL, &m_pPixelShaderRED ) );
+
+	V_RETURN( D3DX11CompileFromFile( sFilename, NULL, NULL, "PS_GREEN", "ps_4_0", D3DCOMPILE_ENABLE_STRICTNESS, NULL,
+                                     NULL, &pPSBlob, &pErrBlob, NULL ) );
+    V_RETURN( m_pDevice->CreatePixelShader( pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(),
+                                            NULL, &m_pPixelShaderGREEN ) );
+
+	V_RETURN( D3DX11CompileFromFile( sFilename, NULL, NULL, "PS_BLUE", "ps_4_0", D3DCOMPILE_ENABLE_STRICTNESS, NULL,
+                                     NULL, &pPSBlob, &pErrBlob, NULL ) );
+    V_RETURN( m_pDevice->CreatePixelShader( pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(),
+                                            NULL, &m_pPixelShaderBLUE ) );
+
+	V_RETURN( D3DX11CompileFromFile( sFilename, NULL, NULL, "PS_YELLOW", "ps_4_0", D3DCOMPILE_ENABLE_STRICTNESS, NULL,
+                                     NULL, &pPSBlob, &pErrBlob, NULL ) );
+    V_RETURN( m_pDevice->CreatePixelShader( pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(),
+                                            NULL, &m_pPixelShaderYELLOW ) );
+
+	V_RETURN( D3DX11CompileFromFile( sFilename, NULL, NULL, "PS_CYAN", "ps_4_0", D3DCOMPILE_ENABLE_STRICTNESS, NULL,
+                                     NULL, &pPSBlob, &pErrBlob, NULL ) );
+    V_RETURN( m_pDevice->CreatePixelShader( pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(),
+                                            NULL, &m_pPixelShaderCYAN ) );
+
+	V_RETURN( D3DX11CompileFromFile( sFilename, NULL, NULL, "PS_PURPLE", "ps_4_0", D3DCOMPILE_ENABLE_STRICTNESS, NULL,
+                                     NULL, &pPSBlob, &pErrBlob, NULL ) );
+    V_RETURN( m_pDevice->CreatePixelShader( pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(),
+                                            NULL, &m_pPixelShaderPURPLE ) );
+
+	V_RETURN( D3DX11CompileFromFile( sFilename, NULL, NULL, "PS_BLACK", "ps_4_0", D3DCOMPILE_ENABLE_STRICTNESS, NULL,
+                                     NULL, &pPSBlob, &pErrBlob, NULL ) );
+    V_RETURN( m_pDevice->CreatePixelShader( pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(),
+                                            NULL, &m_pPixelShaderBLACK ) );
 
     // define sky pixel shader
     V_RETURN( D3DX11CompileFromFile( sFilename, NULL, NULL, "PS_Sky", "ps_4_0", D3DCOMPILE_ENABLE_STRICTNESS, NULL,
@@ -332,7 +374,8 @@ void Render::DrawInstanced( XMMATRIX* pTransforms,
                             MeshType Type,
                             unsigned int nInstanceCount,
                             bool bUpdateTransforms,
-                            bool bCullObjects )
+                            bool bCullObjects, 
+							ColorFilter filter)
 {
     GPA_SCOPED_TASK( __FUNCTION__, s_pRenderDomain );
 
@@ -351,7 +394,34 @@ void Render::DrawInstanced( XMMATRIX* pTransforms,
     m_pContext->IASetPrimitiveTopology( D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST );
     m_pContext->IASetInputLayout( m_pInputLayout );
     m_pContext->VSSetShader( m_pVertexShader, NULL, 0 );
-    m_pContext->PSSetShader( m_pPixelShader, NULL, 0 );
+	switch(filter)
+	{
+	case ColorFilter::WHITE:
+		m_pContext->PSSetShader( m_pPixelShader, NULL, 0 );
+		break;
+	case ColorFilter::RED:
+		m_pContext->PSSetShader( m_pPixelShaderRED, NULL, 0 );
+		break;
+	case ColorFilter::GREEN:
+		m_pContext->PSSetShader( m_pPixelShaderGREEN, NULL, 0 );
+		break;
+	case ColorFilter::BLUE:
+		m_pContext->PSSetShader( m_pPixelShaderBLUE, NULL, 0 );
+		break;
+	case ColorFilter::PURPLE:
+		m_pContext->PSSetShader( m_pPixelShaderPURPLE, NULL, 0 );
+		break;
+	case ColorFilter::YELLOW:
+		m_pContext->PSSetShader( m_pPixelShaderYELLOW, NULL, 0 );
+		break;
+	case ColorFilter::CYAN:
+		m_pContext->PSSetShader( m_pPixelShaderCYAN, NULL, 0 );
+		break;
+	case ColorFilter::BLACK:
+		m_pContext->PSSetShader( m_pPixelShaderBLACK, NULL, 0 );
+		break;
+	}
+    
     m_pContext->PSSetSamplers( 0, 1, &m_pSamplerState );
 
     UINT Strides[2] =
@@ -411,13 +481,10 @@ void Render::DrawInstanced( XMMATRIX* pTransforms,
     }
 }
 
-void Render::DrawTerrain( XMMATRIX* pTransforms,
-                          unsigned int nInstanceCount )
+void Render::DrawTerrain( )
 {
     GPA_SCOPED_TASK( __FUNCTION__, s_pRenderDomain );
 
-    // Draw the concrete first
-    DrawInstanced( pTransforms, CONCRETE_MESH, nInstanceCount, true, false );
 
     // Then draw
     ColonyMesh* pInstancedMesh = m_pMeshes[GRASS_MESH];
@@ -473,6 +540,13 @@ void Render::Destroy( void )
     SAFE_RELEASE( m_pInputLayout );
     SAFE_RELEASE( m_pVertexShader );
     SAFE_RELEASE( m_pPixelShader );
+	SAFE_RELEASE( m_pPixelShaderRED );
+	SAFE_RELEASE( m_pPixelShaderGREEN );
+	SAFE_RELEASE( m_pPixelShaderBLUE );
+	SAFE_RELEASE( m_pPixelShaderYELLOW );
+	SAFE_RELEASE( m_pPixelShaderPURPLE );
+	SAFE_RELEASE( m_pPixelShaderCYAN );
+	SAFE_RELEASE( m_pPixelShaderBLACK );
     SAFE_RELEASE( m_pSkyPixelShader );
 
     SAFE_RELEASE( m_pMeshTextures[ UNIT_DIFFUSE ] );

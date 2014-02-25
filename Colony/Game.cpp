@@ -81,7 +81,13 @@ void Game::Reset( void )
     m_nNumInactiveTiles = 0;
     m_nNumActiveFactories = 0;
     m_nNumActiveTrees = 0;
-    m_nNumActiveTiles = 0;
+    m_nNumActiveTilesRed = 0;
+	m_nNumActiveTilesBlue = 0;
+	m_nNumActiveTilesGreen = 0;
+	m_nNumActiveTilesPurple = 0;
+	m_nNumActiveTilesYellow = 0;
+	m_nNumActiveTilesCyan = 0;
+	m_nNumActiveTilesBlack = 0;
     m_nNumInactiveTrees = 0;
     m_fCoverage = 0.0f;
 
@@ -152,22 +158,45 @@ void Game::Reset( void )
 void Game::Render( void )
 {
     // Factories
-    Render::DrawInstanced( m_pFactoryMatrices, FACTORY_MESH, m_nNumActiveFactories, false );
+    Render::DrawInstanced( &m_pFactoryMatrices[0], FACTORY_MESH, 1, true, true);
+	Render::DrawInstanced( &m_pFactoryMatrices[1], FACTORY_MESH, 1, true, true, ColorFilter::RED);
+	Render::DrawInstanced( &m_pFactoryMatrices[2], FACTORY_MESH, 1, true, true, ColorFilter::BLUE);
+	Render::DrawInstanced( &m_pFactoryMatrices[3], FACTORY_MESH, 1, true, true, ColorFilter::GREEN);
+	Render::DrawInstanced( &m_pFactoryMatrices[4], FACTORY_MESH, 1, true, true, ColorFilter::PURPLE);
+	Render::DrawInstanced( &m_pFactoryMatrices[5], FACTORY_MESH, 1, true, true, ColorFilter::YELLOW);
+	Render::DrawInstanced( &m_pFactoryMatrices[6], FACTORY_MESH, 1, true, true, ColorFilter::CYAN);
+	Render::DrawInstanced( &m_pFactoryMatrices[7], FACTORY_MESH, 1, true, true, ColorFilter::BLACK);
 
     // Trees
     if( g_bRenderTrees )
     {
-        Render::DrawInstanced( m_pActiveTreeMatrices, TREE_MESH, m_nNumActiveTrees );
-        Render::DrawInstanced( m_pInactiveTreeMatrices, TREE_MESH, m_nNumInactiveTrees );
+        Render::DrawInstanced( m_pActiveTreeMatrices, TREE_MESH, m_nNumActiveTrees, true, true);
+        Render::DrawInstanced( m_pInactiveTreeMatrices, TREE_MESH, m_nNumInactiveTrees, true, true);
     }
 
     // Units
-    Render::DrawInstanced( m_UnitManager.GetTransforms(),
-                           UNIT_MESH,
-                           m_UnitManager.GetNumUnits() );
+	int numUnits =  m_UnitManager.GetNumUnits() * (1.0/8.0);
+	Render::DrawInstanced( &m_UnitManager.GetTransforms()[0], UNIT_MESH, numUnits, true, true);
+    Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 1], UNIT_MESH, numUnits, true, true, ColorFilter::RED);
+	Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 2], UNIT_MESH, numUnits, true, true, ColorFilter::BLUE);
+	Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 3], UNIT_MESH, numUnits, true, true, ColorFilter::GREEN);
+	Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 4], UNIT_MESH, numUnits, true, true, ColorFilter::PURPLE);
+	Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 5], UNIT_MESH, numUnits, true, true, ColorFilter::YELLOW);
+	Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 6], UNIT_MESH, numUnits, true, true, ColorFilter::CYAN);
+	Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 7], UNIT_MESH, numUnits, true, true, ColorFilter::BLACK);
+
+    //Concrete
+    Render::DrawInstanced( m_pTileMatrices,       CONCRETE_MESH, m_nNumActiveTiles,       true, false);
+	Render::DrawInstanced( m_pTileMatricesRed,    CONCRETE_MESH, m_nNumActiveTilesRed,    true, false, ColorFilter::RED);
+	Render::DrawInstanced( m_pTileMatricesBlue,   CONCRETE_MESH, m_nNumActiveTilesBlue,   true, false, ColorFilter::BLUE);
+	Render::DrawInstanced( m_pTileMatricesGreen,  CONCRETE_MESH, m_nNumActiveTilesGreen,  true, false, ColorFilter::GREEN);
+	Render::DrawInstanced( m_pTileMatricesPurple, CONCRETE_MESH, m_nNumActiveTilesPurple, true, false, ColorFilter::PURPLE);
+	Render::DrawInstanced( m_pTileMatricesYellow, CONCRETE_MESH, m_nNumActiveTilesYellow, true, false, ColorFilter::YELLOW);
+	Render::DrawInstanced( m_pTileMatricesCyan,   CONCRETE_MESH, m_nNumActiveTilesCyan,   true, false, ColorFilter::CYAN);
+	Render::DrawInstanced( m_pTileMatricesBlack,  CONCRETE_MESH, m_nNumActiveTilesBlack,  true, false, ColorFilter::BLACK);
 
     // Terrain
-    Render::DrawTerrain( m_pTileMatrices, m_nNumActiveTiles );
+    Render::DrawTerrain( );
 
     // Sky
     Render::DrawSky();
@@ -231,7 +260,7 @@ void Game::SetTileActive( unsigned int nTile )
 }
 
 // Returns true once the tile is paved
-bool Game::PaveTile( unsigned int nTile )
+bool Game::PaveTile( unsigned int nTile)
 {
     m_pTiles[nTile].fTimer -= m_fElapsedTime;
 
