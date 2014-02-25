@@ -1,5 +1,5 @@
-﻿Build started 2/24/2014 3:32:20 PM.
-     1>Project "J:\PortableApps\Documents\Git\Colony\DXUT\Core\DXUT_2010.vcxproj" on node 4 (rebuild target(s)).
+﻿Build started 2/25/2014 10:20:08 AM.
+     1>Project "J:\PortableApps\Documents\Git\Colony\DXUT\Core\DXUT_2010.vcxproj" on node 3 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "J:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.lastbuildstate".
        InitializeBuildStatus:
@@ -24,4 +24,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.66
+Time Elapsed 00:00:07.07

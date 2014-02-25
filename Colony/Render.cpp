@@ -394,6 +394,8 @@ void Render::DrawInstanced( XMMATRIX* pTransforms,
     m_pContext->IASetPrimitiveTopology( D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST );
     m_pContext->IASetInputLayout( m_pInputLayout );
     m_pContext->VSSetShader( m_pVertexShader, NULL, 0 );
+	
+	//Color filters
 	switch(filter)
 	{
 	case ColorFilter::WHITE:
@@ -498,10 +500,17 @@ void Render::DrawTerrain( XMMATRIX* pTransforms,
     unsigned int nIndexCount = pInstancedMesh->GetIndexCount();
     ID3D11ShaderResourceView* pTexture = m_pMeshTextures[GRASS_DIFFUSE];
 
+
+
+
     m_pContext->IASetPrimitiveTopology( D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST );
     m_pContext->IASetInputLayout( m_pInputLayout );
     m_pContext->VSSetShader( m_pVertexShader, NULL, 0 );
-    m_pContext->PSSetShader( m_pPixelShader, NULL, 0 );
+    
+	
+	//old concrete shader
+	m_pContext->PSSetShader( m_pPixelShader, NULL, 0 );	
+    
     m_pContext->PSSetSamplers( 0, 1, &m_pSamplerState );
 
     // Quad to extend terrain past skydome

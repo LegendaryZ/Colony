@@ -180,7 +180,7 @@ unsigned int Game::GetInactiveTile( void )
     return m_pInactiveTiles[nIndex];
 }
 
-void Game::SetTileActive( unsigned int nTile )
+void Game::SetTileActive( unsigned int nTile)
 {
     assert( nTile >= 0 && nTile < gs_nWorldSizeSq );
 

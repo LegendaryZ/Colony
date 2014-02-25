@@ -245,7 +245,27 @@ void UnitManager::UnitLogic( unsigned int nUnit )
                 else
                 {
                     // The tile was paved, back to your base
-                    unsigned int nIndex = m_pGame->GetFactories()[ ( nUnit + nLane ) % gs_nMaxFactories ];
+					unsigned int nIndex =m_pGame->GetFactories()[ ( nUnit + nLane ) % gs_nMaxFactories ];
+
+						/*//Killswitch for FOR statement
+						bool kill=false;
+						
+						//what factory to direct the unit towards
+						unsigned int nIndex =0;// m_pGame->GetFactories()[ ( nUnit + nLane ) % gs_nMaxFactories ];
+					
+						//Check to see what section the unit is in.
+						//there are the same number of sections as there are factories
+						for(int i=1;!kill;i++)
+						{
+							if (nUnit < (gs_nMaxUnits/gs_nMaxFactories) * i)
+							{
+								kill=true;
+
+								nIndex=m_pGame->GetFactories()[ i-1 ];
+							}
+						}*/
+					
+                    
 
                     m_UnitSharedData[nUnit].fGoalPositionX[nLane] = m_pGame->GetTiles()[ nIndex ].fX;
                     m_UnitSharedData[nUnit].fGoalPositionY[nLane] = m_pGame->GetTiles()[ nIndex ].fY;

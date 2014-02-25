@@ -26,6 +26,7 @@ struct Tile
     int nTree;
     volatile bool bActive;
     bool bFactory;
+	int faction;							//Eryc - Way to mark tiles for shaders
 };
 
 class __declspec( align( 16 ) ) Game
@@ -54,7 +55,7 @@ public:
     unsigned int GetInactiveTile( void );
 
     // Flag a tile as active
-    void SetTileActive( unsigned int nTile );
+    void SetTileActive( unsigned int nTile);
 
     // Get the array of tiles
     Tile* GetTiles( void );

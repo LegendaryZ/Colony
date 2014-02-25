@@ -1,23 +1,23 @@
-﻿Build started 2/24/2014 3:32:30 PM.
+﻿Build started 2/25/2014 10:20:19 AM.
      1>Project "J:\PortableApps\Documents\Git\Colony\Colony\Colony.vcxproj" on node 4 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "J:\PortableApps\Documents\Git\Colony\Colony\\Win32\Debug\Colony\Colony.lastbuildstate".
        InitializeBuildStatus:
-         Touching "J:\PortableApps\Documents\Git\Colony\Colony\\Win32\Debug\Colony\Colony.unsuccessfulbuild".
+         Creating "J:\PortableApps\Documents\Git\Colony\Colony\\Win32\Debug\Colony\Colony.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\\include" /I..\.\\DXUT\\Core /I..\.\\DXUT\\Optional /I..\.\SampleComponents /I..\.\SampleComponents\Middleware\TBB\include /Zi /nologo /W4 /WX- /Od /Oi /Oy- /D _WINDOWS /D WIN32 /D _DEBUG /D DEBUG /D D3DXFX_LARGEADDRESS_HANDLE /D _VC80_UPGRADE=0x0710 /D _UNICODE /D UNICODE /Gm /EHsc /MTd /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /Fo"J:\PortableApps\Documents\Git\Colony\Colony\\Win32\Debug\Colony\\" /Fd"J:\PortableApps\Documents\Git\Colony\Colony\\Win32\Debug\Colony\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Colony.cpp Game.cpp Render.cpp UnitManager.cpp /IGNORE:4089 /IGNORE:4099 
          UnitManager.cpp
          Render.cpp
      1>j:\portableapps\documents\git\colony\colony\Render.h(165): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
      1>j:\portableapps\documents\git\colony\colony\Render.h(165): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
-     1>Render.cpp(399): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
-     1>Render.cpp(402): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
-     1>Render.cpp(405): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
-     1>Render.cpp(408): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
-     1>Render.cpp(411): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
-     1>Render.cpp(414): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
-     1>Render.cpp(417): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
-     1>Render.cpp(420): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
+     1>Render.cpp(401): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
+     1>Render.cpp(404): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
+     1>Render.cpp(407): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
+     1>Render.cpp(410): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
+     1>Render.cpp(413): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
+     1>Render.cpp(416): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
+     1>Render.cpp(419): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
+     1>Render.cpp(422): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
          Game.cpp
      1>j:\portableapps\documents\git\colony\colony\Render.h(165): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
      1>j:\portableapps\documents\git\colony\colony\Render.h(165): warning C4482: nonstandard extension used: enum 'ColorFilter' used in qualified name
@@ -61,4 +61,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:16.51
+Time Elapsed 00:00:13.70
