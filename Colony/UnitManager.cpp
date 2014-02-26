@@ -238,15 +238,46 @@ void UnitManager::UnitLogic( unsigned int nUnit )
             if( !pTiles[nTileIndex].bActive )
             {
                 // Stop and pave the tile
-                if( !m_pGame->PaveTile( nTileIndex ) )
+				int type = (int)floor(7.0 * (nUnit / (float)m_nNumUnits));
+				ColorFilter filter = WHITE;
+				switch(type)
+				{
+				case 0:
+					filter = WHITE;
+					break;
+				case 1:
+					filter = RED;
+					break;
+				case 2:
+					filter = BLUE;
+					break;
+				case 3:
+					filter = GREEN;
+					break;
+				case 4:
+					filter = PURPLE;
+					break;
+				case 5:
+					filter = YELLOW;
+					break;
+				case 6:
+					filter = CYAN;
+					break;
+				case 7:
+					filter = BLACK;
+					break;
+				}
+
+
+                if( !m_pGame->PaveTile( nTileIndex, filter ) )
                 {
                     m_UnitUpdate[nUnit].fSpeed[nLane] = 0.0f;
                 }
                 else
                 {
                     // The tile was paved, back to your base
-                    //unsigned int nIndex = m_pGame->GetFactories()[ ( nUnit + nLane ) % gs_nMaxFactories ];
-					unsigned int nIndex = m_pGame->GetFactories()[ (int)floor(7.0 * (nUnit / (float)m_nNumUnits))];
+                    unsigned int nIndex = m_pGame->GetFactories()[ ( nUnit + nLane ) % gs_nMaxFactories ];
+					//unsigned int nIndex = m_pGame->GetFactories()[ (int)floor(7.0 * (nUnit / (float)m_nNumUnits))];
                     m_UnitSharedData[nUnit].fGoalPositionX[nLane] = m_pGame->GetTiles()[ nIndex ].fX;
                     m_UnitSharedData[nUnit].fGoalPositionY[nLane] = m_pGame->GetTiles()[ nIndex ].fY;
                     m_UnitUpdate[nUnit].nGoalIndex[nLane] = nIndex;

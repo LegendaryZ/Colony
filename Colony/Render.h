@@ -20,17 +20,7 @@
 // The maximum objects rendered per draw call
 static const unsigned int   gs_nMaxPerDraw = max( gs_nWorldSizeSq, gs_nMaxUnits );
 
-enum ColorFilter
-{
-	WHITE = 20,
-	RED,
-	GREEN,
-	BLUE,
-	PURPLE,
-	YELLOW,
-	CYAN,
-	BLACK
-};
+
 
 enum MeshType
 {

@@ -17,6 +17,18 @@
 #include "Colony.h"
 #include "UnitManager.h"
 
+enum ColorFilter
+{
+	WHITE = 20,
+	RED,
+	GREEN,
+	BLUE,
+	PURPLE,
+	YELLOW,
+	CYAN,
+	BLACK
+};
+
 // Structure for each game "space"
 struct Tile
 {
@@ -54,7 +66,7 @@ public:
     unsigned int GetInactiveTile( void );
 
     // Flag a tile as active
-    void SetTileActive( unsigned int nTile );
+    void SetTileActive( unsigned int nTile, ColorFilter filter = ColorFilter::WHITE );
 
     // Get the array of tiles
     Tile* GetTiles( void );
@@ -67,7 +79,7 @@ public:
     void SetCoverageThreshold( float fThreshold );
 
     // Lower the tree
-    bool PaveTile( unsigned int nTile );
+    bool PaveTile( unsigned int nTile, ColorFilter filter = ColorFilter::WHITE );
 
 private:
     UnitManager m_UnitManager;                       // The unit manager

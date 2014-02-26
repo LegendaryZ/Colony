@@ -186,14 +186,14 @@ void Game::Render( void )
 	Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 7], UNIT_MESH, numUnits, true, true, ColorFilter::BLACK);
 
     //Concrete
-    Render::DrawInstanced( m_pTileMatrices,       CONCRETE_MESH, m_nNumActiveTiles,       true, false);
-	Render::DrawInstanced( m_pTileMatricesRed,    CONCRETE_MESH, m_nNumActiveTilesRed,    true, false, ColorFilter::RED);
-	Render::DrawInstanced( m_pTileMatricesBlue,   CONCRETE_MESH, m_nNumActiveTilesBlue,   true, false, ColorFilter::BLUE);
-	Render::DrawInstanced( m_pTileMatricesGreen,  CONCRETE_MESH, m_nNumActiveTilesGreen,  true, false, ColorFilter::GREEN);
-	Render::DrawInstanced( m_pTileMatricesPurple, CONCRETE_MESH, m_nNumActiveTilesPurple, true, false, ColorFilter::PURPLE);
-	Render::DrawInstanced( m_pTileMatricesYellow, CONCRETE_MESH, m_nNumActiveTilesYellow, true, false, ColorFilter::YELLOW);
-	Render::DrawInstanced( m_pTileMatricesCyan,   CONCRETE_MESH, m_nNumActiveTilesCyan,   true, false, ColorFilter::CYAN);
-	Render::DrawInstanced( m_pTileMatricesBlack,  CONCRETE_MESH, m_nNumActiveTilesBlack,  true, false, ColorFilter::BLACK);
+    Render::DrawInstanced( m_pTileMatrices,       CONCRETE_MESH, m_nNumActiveTiles,       true, true);
+	Render::DrawInstanced( m_pTileMatricesRed,    CONCRETE_MESH, m_nNumActiveTiles,    true, true, ColorFilter::RED);
+	Render::DrawInstanced( m_pTileMatricesBlue,   CONCRETE_MESH, m_nNumActiveTiles,   true, true, ColorFilter::BLUE);
+	Render::DrawInstanced( m_pTileMatricesGreen,  CONCRETE_MESH, m_nNumActiveTiles,  true, true, ColorFilter::GREEN);
+	Render::DrawInstanced( m_pTileMatricesPurple, CONCRETE_MESH, m_nNumActiveTiles, true, true, ColorFilter::PURPLE);
+	Render::DrawInstanced( m_pTileMatricesYellow, CONCRETE_MESH, m_nNumActiveTiles, true, true, ColorFilter::YELLOW);
+	Render::DrawInstanced( m_pTileMatricesCyan,   CONCRETE_MESH, m_nNumActiveTiles,   true, true, ColorFilter::CYAN);
+	Render::DrawInstanced( m_pTileMatricesBlack,  CONCRETE_MESH, m_nNumActiveTiles,  true, true, ColorFilter::BLACK);
 
     // Terrain
     Render::DrawTerrain( );
@@ -209,7 +209,7 @@ unsigned int Game::GetInactiveTile( void )
     return m_pInactiveTiles[nIndex];
 }
 
-void Game::SetTileActive( unsigned int nTile )
+void Game::SetTileActive( unsigned int nTile, ColorFilter filter )
 {
     assert( nTile >= 0 && nTile < gs_nWorldSizeSq );
 
@@ -248,7 +248,33 @@ void Game::SetTileActive( unsigned int nTile )
     }
     else
     { // ...or a slab of cement
-        m_pTileMatrices[ nIndex - 1 ] = XMMatrixTranslation( m_pTiles[nTile].fX, 0.0f, m_pTiles[nTile].fY );
+		switch(filter)
+		{
+		case WHITE:
+			m_pTileMatrices[ nIndex - 1 ] = XMMatrixTranslation( m_pTiles[nTile].fX, 0.0f, m_pTiles[nTile].fY );
+			break;
+		case RED:
+			m_pTileMatricesRed[ nIndex - 1 ] = XMMatrixTranslation( m_pTiles[nTile].fX, 0.0f, m_pTiles[nTile].fY );
+			break;
+		case BLUE:
+			m_pTileMatricesBlue[ nIndex - 1 ] = XMMatrixTranslation( m_pTiles[nTile].fX, 0.0f, m_pTiles[nTile].fY );
+			break;
+		case GREEN:
+			m_pTileMatricesGreen[ nIndex - 1 ] = XMMatrixTranslation( m_pTiles[nTile].fX, 0.0f, m_pTiles[nTile].fY );
+			break;
+		case YELLOW:
+			m_pTileMatricesYellow[ nIndex - 1 ] = XMMatrixTranslation( m_pTiles[nTile].fX, 0.0f, m_pTiles[nTile].fY );
+			break;
+		case PURPLE:
+			m_pTileMatricesPurple[ nIndex - 1 ] = XMMatrixTranslation( m_pTiles[nTile].fX, 0.0f, m_pTiles[nTile].fY );
+			break;
+		case CYAN:
+			m_pTileMatricesCyan[ nIndex - 1 ] = XMMatrixTranslation( m_pTiles[nTile].fX, 0.0f, m_pTiles[nTile].fY );
+			break;
+		case BLACK:
+			m_pTileMatricesBlack[ nIndex - 1 ] = XMMatrixTranslation( m_pTiles[nTile].fX, 0.0f, m_pTiles[nTile].fY );
+			break;
+		}
     }
 
     // Stop rendering the tree
@@ -260,7 +286,7 @@ void Game::SetTileActive( unsigned int nTile )
 }
 
 // Returns true once the tile is paved
-bool Game::PaveTile( unsigned int nTile)
+bool Game::PaveTile( unsigned int nTile, ColorFilter filter)
 {
     m_pTiles[nTile].fTimer -= m_fElapsedTime;
 
@@ -273,7 +299,7 @@ bool Game::PaveTile( unsigned int nTile)
 
     if( m_pTiles[nTile].fTimer <= 0.0f )
     {
-        SetTileActive( nTile );
+        SetTileActive( nTile , filter);
         return true;
     }
 

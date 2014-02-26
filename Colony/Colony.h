@@ -44,7 +44,7 @@ static const unsigned int   gs_nBinCount = ( gs_nWorldSize / gs_nBinSize );
 static const unsigned int   gs_nBinCountSq = gs_nBinCount * gs_nBinCount;
 static const unsigned int   gs_nBinCapacity = 2048;
 static const unsigned int   gs_nTBBTaskCount = 64;
-static const unsigned int   gs_nStartingUnits = 32 * 1024 / gs_nSIMDWidth;
+static const unsigned int   gs_nStartingUnits = 16 * 1024 / gs_nSIMDWidth;
 
 // Rendering sizes
 static const float          gs_fUnitSize = 0.0212f;      // Units are 0.0212x0.0212 in size
