@@ -1,0 +1,32 @@
+﻿Build started 2/27/2014 9:45:22 AM.
+     1>Project "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\SampleComponents_2010.vcxproj" on node 4 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\include" /I.\middleware\tbb\include /I..\DXUT\Core /I..\DXUT\Optional /ZI /nologo /W3 /WX- /Od /Oy- /D VS2010 /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\\" /Fd"\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ContactUI.cpp CPUUsage.cpp CPUUsageUI.cpp HelpUI.cpp TaskMgrTBB.cpp
+         TaskMgrTBB.cpp
+         HelpUI.cpp
+         CPUUsageUI.cpp
+         CPUUsage.cpp
+         ContactUI.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactDialog.res" ContactDialog.rc 
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\bin\Win32\SampleComponents\Debug\SampleComponents.lib" /NOLOGO /MACHINE:X86 "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactDialog.res"
+         "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactUI.obj"
+         "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\CPUUsage.obj"
+         "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\CPUUsageUI.obj"
+         "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\HelpUI.obj"
+         "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\TaskMgrTBB.obj"
+         SampleComponents_2010.vcxproj -> \\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\bin\Win32\SampleComponents\Debug\SampleComponents.lib
+       FinalizeBuildStatus:
+         Deleting file "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.unsuccessfulbuild".
+         Touching "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.lastbuildstate".
+     1>Done Building Project "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\SampleComponents\SampleComponents_2010.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:15.92
