@@ -1,27 +1,27 @@
-﻿Build started 2/27/2014 9:45:22 AM.
-     1>Project "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\DXUT_2010.vcxproj" on node 3 (rebuild target(s)).
+﻿Build started 2/28/2014 6:47:03 PM.
+     1>Project "H:\PortableApps\Documents\Git\Colony\DXUT\Core\DXUT_2010.vcxproj" on node 4 (rebuild target(s)).
      1>_PrepareForClean:
-         Deleting file "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.lastbuildstate".
+         Deleting file "H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.lastbuildstate".
        InitializeBuildStatus:
-         Creating "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Creating "H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\\Core /I..\..\\Optional /IDX_SDKDIR\include /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D _LIB /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MTd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Fo"\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\\" /Fd"\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DXUT.cpp DXUTDevice11.cpp DXUTDevice9.cpp DXUTmisc.cpp  
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\\Core /I..\..\\Optional /IDX_SDKDIR\include /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D _LIB /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MTd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Fo"H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\\" /Fd"H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DXUT.cpp DXUTDevice11.cpp DXUTDevice9.cpp DXUTmisc.cpp  
          DXUT.cpp
          DXUTDevice11.cpp
          DXUTDevice9.cpp
          DXUTmisc.cpp
          Generating Code...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\bin\Win32\DXUT\Debug\DXUT.lib" /NOLOGO "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.obj"
-         "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUTDevice11.obj"
-         "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUTDevice9.obj"
-         "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUTmisc.obj"
-         DXUT_2010.vcxproj -> \\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\bin\Win32\DXUT\Debug\DXUT.lib
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\bin\Win32\DXUT\Debug\DXUT.lib" /NOLOGO H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.obj
+         H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUTDevice11.obj
+         H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUTDevice9.obj
+         H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUTmisc.obj
+         DXUT_2010.vcxproj -> H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\bin\Win32\DXUT\Debug\DXUT.lib
        FinalizeBuildStatus:
-         Deleting file "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.unsuccessfulbuild".
-         Touching "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.lastbuildstate".
-     1>Done Building Project "\\banner.main.ad.rit.edu\students\ecd9090\IGMProfile\Desktop\Colony-master\DXUT\Core\DXUT_2010.vcxproj" (rebuild target(s)).
+         Deleting file "H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.unsuccessfulbuild".
+         Touching "H:\PortableApps\Documents\Git\Colony\DXUT\Core\..\..\obj\Win32\DXUT\Debug\DXUT.lastbuildstate".
+     1>Done Building Project "H:\PortableApps\Documents\Git\Colony\DXUT\Core\DXUT_2010.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:09.47
+Time Elapsed 00:00:09.12
