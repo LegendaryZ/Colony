@@ -24,7 +24,7 @@
 // Global defines
 static const unsigned int   gs_nWorldSize = 512;    // Size of the world
 static const unsigned int   gs_nWorldSizeSq = gs_nWorldSize * gs_nWorldSize;    // Size of the world
-static const unsigned int   gs_nMaxUnits = 1024 * 128; // Max number of units ( 128k )
+static const unsigned int   gs_nMaxUnits = 1024 * 8; // Max number of units ( 128k )
 static const unsigned int   gs_nMaxFactories = 8; // Max number of factories
 
 
@@ -44,7 +44,7 @@ static const unsigned int   gs_nBinCount = ( gs_nWorldSize / gs_nBinSize );
 static const unsigned int   gs_nBinCountSq = gs_nBinCount * gs_nBinCount;
 static const unsigned int   gs_nBinCapacity = 2048;
 static const unsigned int   gs_nTBBTaskCount = 64;
-static const unsigned int   gs_nStartingUnits = 16 * 1024 / gs_nSIMDWidth;
+static const unsigned int   gs_nStartingUnits = 8 * 1024 / gs_nSIMDWidth;
 
 // Rendering sizes
 static const float          gs_fUnitSize = 0.0212f;      // Units are 0.0212x0.0212 in size
@@ -61,7 +61,7 @@ static const float          gs_fRecipBinSize = 1.0f / gs_fBinSize;
 static const unsigned int   gs_nRenderBatchSize = 1024;
 
 // Unit behavior
-static const float          gs_fDefaultUnitSpeed = ( gs_fTileSize / 2.0f ) * 5.0f;
+static const float          gs_fDefaultUnitSpeed = ( gs_fTileSize / 2.0f ) * 25.0f;
 static const float          gs_fTileTime = 0.1f;
 
 static const float          gs_fGreatRange = 0.5f;

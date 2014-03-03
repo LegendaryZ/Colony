@@ -1,7 +1,11 @@
-﻿Build started 2/25/2014 6:56:57 PM.
-     1>Project "H:\Colony-master\DXUT\Optional\DXUTOpt_2010.vcxproj" on node 2 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\Core\ /I..\..\\Core /I..\..\\Optional /I/include /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D _LIB /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MTd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Fo"H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\\" /Fd"H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DXUTcamera.cpp DXUTgui.cpp DXUTguiIME.cpp DXUTres.cpp DXUTsettingsdlg.cpp ImeUi.cpp SDKmesh.cpp SDKmisc.cpp SDKsound.cpp SDKwavefile.cpp  
+﻿Build started 3/3/2014 1:43:38 PM.
+     1>Project "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\DXUTOpt_2010.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTOpt.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTOpt.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\Core\ /I..\..\\Core /I..\..\\Optional /I/include /ZI /nologo /W4 /WX- /Od /Oi /Oy- /D WIN32 /D _DEBUG /D DEBUG /D PROFILE /D _WINDOWS /D _LIB /D D3DXFX_LARGEADDRESS_HANDLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MTd /GS /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp- /Fo"C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\\" /Fd"C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DXUTcamera.cpp DXUTgui.cpp DXUTguiIME.cpp DXUTres.cpp DXUTsettingsdlg.cpp ImeUi.cpp SDKmesh.cpp SDKmisc.cpp SDKsound.cpp SDKwavefile.cpp  
          DXUTcamera.cpp
          DXUTgui.cpp
          DXUTguiIME.cpp
@@ -14,19 +18,22 @@
          SDKwavefile.cpp
          Generating Code...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"H:\Colony-master\DXUT\Optional\..\..\bin\Win32\DXUTOpt\Debug\DXUTOpt.lib" /NOLOGO "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTcamera.obj"
-         "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTgui.obj"
-         "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTguiIME.obj"
-         "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTres.obj"
-         "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTsettingsdlg.obj"
-         "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\ImeUi.obj"
-         "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKmesh.obj"
-         "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKmisc.obj"
-         "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKsound.obj"
-         "H:\Colony-master\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKwavefile.obj"
-         DXUTOpt_2010.vcxproj -> H:\Colony-master\DXUT\Optional\..\..\bin\Win32\DXUTOpt\Debug\DXUTOpt.lib
-     1>Done Building Project "H:\Colony-master\DXUT\Optional\DXUTOpt_2010.vcxproj" (Rebuild target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\bin\Win32\DXUTOpt\Debug\DXUTOpt.lib" /NOLOGO "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTcamera.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTgui.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTguiIME.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTres.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTsettingsdlg.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\ImeUi.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKmesh.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKmisc.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKsound.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\SDKwavefile.obj"
+         DXUTOpt_2010.vcxproj -> C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\bin\Win32\DXUTOpt\Debug\DXUTOpt.lib
+       FinalizeBuildStatus:
+         Deleting file "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTOpt.unsuccessfulbuild".
+         Touching "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\..\..\obj\Win32\DXUTOpt\Debug\DXUTOpt.lastbuildstate".
+     1>Done Building Project "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\DXUT\Optional\DXUTOpt_2010.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:33.78
+Time Elapsed 00:00:23.78

@@ -105,7 +105,7 @@ void UnitManager::Reset( void )
         {
             unsigned int* pFactories = m_pGame->GetFactories();
 
-            unsigned int nIndex = pFactories[ ( i + j ) % gs_nMaxFactories ];
+            unsigned int nIndex = pFactories[ (int)floor(gs_nMaxFactories * (i / (float)gs_nUnitTaskCount))];
 
             m_UnitSharedData[i].fGoalPositionX[j] = m_pGame->GetTiles()[ nIndex ].fX;
             m_UnitSharedData[i].fGoalPositionY[j] = m_pGame->GetTiles()[ nIndex ].fY;
@@ -238,7 +238,7 @@ void UnitManager::UnitLogic( unsigned int nUnit )
             if( !pTiles[nTileIndex].bActive )
             {
                 // Stop and pave the tile
-				int type = (int)floor(7.0 * (nUnit / (float)m_nNumUnits));
+				int type = (int)floor(gs_nMaxFactories * (nUnit / (float)m_nNumUnits));
 				ColorFilter filter = WHITE;
 				switch(type)
 				{
@@ -276,8 +276,26 @@ void UnitManager::UnitLogic( unsigned int nUnit )
                 else
                 {
                     // The tile was paved, back to your base
-                    unsigned int nIndex = m_pGame->GetFactories()[ ( nUnit + nLane ) % gs_nMaxFactories ];
+                    //unsigned int nIndex = m_pGame->GetFactories()[ ( nUnit + nLane ) % gs_nMaxFactories ];
 					//unsigned int nIndex = m_pGame->GetFactories()[ (int)floor(7.0 * (nUnit / (float)m_nNumUnits))];
+
+					unsigned int nIndex = m_pGame->GetFactories()[(int)floor(gs_nMaxFactories * (nUnit / (float)m_nNumUnits))];
+					/*
+					bool kill=false;
+					unsigned int nIndex=0;
+
+					for(int i=0;!kill;i++)
+					{
+						if(nUnit <=(m_nNumUnits/gs_nMaxFactories)*i)
+						{
+							kill=true;
+
+							nIndex= m_pGame->GetFactories()[i-2];
+						}
+
+					}*/
+
+
                     m_UnitSharedData[nUnit].fGoalPositionX[nLane] = m_pGame->GetTiles()[ nIndex ].fX;
                     m_UnitSharedData[nUnit].fGoalPositionY[nLane] = m_pGame->GetTiles()[ nIndex ].fY;
                     m_UnitUpdate[nUnit].nGoalIndex[nLane] = nIndex;

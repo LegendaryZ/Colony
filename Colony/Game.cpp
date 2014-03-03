@@ -158,7 +158,7 @@ void Game::Reset( void )
 void Game::Render( void )
 {
     // Factories
-    Render::DrawInstanced( &m_pFactoryMatrices[0], FACTORY_MESH, 1, true, true);
+    Render::DrawInstanced( &m_pFactoryMatrices[0], FACTORY_MESH, 1, true, true, ColorFilter::WHITE);
 	Render::DrawInstanced( &m_pFactoryMatrices[1], FACTORY_MESH, 1, true, true, ColorFilter::RED);
 	Render::DrawInstanced( &m_pFactoryMatrices[2], FACTORY_MESH, 1, true, true, ColorFilter::BLUE);
 	Render::DrawInstanced( &m_pFactoryMatrices[3], FACTORY_MESH, 1, true, true, ColorFilter::GREEN);
@@ -176,7 +176,7 @@ void Game::Render( void )
 
     // Units
 	int numUnits =  m_UnitManager.GetNumUnits() * (1.0/8.0);
-	Render::DrawInstanced( &m_UnitManager.GetTransforms()[0], UNIT_MESH, numUnits, true, true);
+	Render::DrawInstanced( &m_UnitManager.GetTransforms()[0], UNIT_MESH, numUnits, true, true, ColorFilter::WHITE);
     Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 1], UNIT_MESH, numUnits, true, true, ColorFilter::RED);
 	Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 2], UNIT_MESH, numUnits, true, true, ColorFilter::BLUE);
 	Render::DrawInstanced( &m_UnitManager.GetTransforms()[numUnits * 3], UNIT_MESH, numUnits, true, true, ColorFilter::GREEN);
