@@ -1,0 +1,32 @@
+﻿Build started 3/3/2014 1:43:39 PM.
+     1>Project "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\SampleComponents_2010.vcxproj" on node 4 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\include" /I.\middleware\tbb\include /I..\DXUT\Core /I..\DXUT\Optional /ZI /nologo /W3 /WX- /Od /Oy- /D VS2010 /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\\" /Fd"C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ContactUI.cpp CPUUsage.cpp CPUUsageUI.cpp HelpUI.cpp TaskMgrTBB.cpp
+         TaskMgrTBB.cpp
+         HelpUI.cpp
+         CPUUsageUI.cpp
+         CPUUsage.cpp
+         ContactUI.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactDialog.res" ContactDialog.rc 
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\bin\Win32\SampleComponents\Debug\SampleComponents.lib" /NOLOGO /MACHINE:X86 "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactDialog.res"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\ContactUI.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\CPUUsage.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\CPUUsageUI.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\HelpUI.obj"
+         "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\TaskMgrTBB.obj"
+         SampleComponents_2010.vcxproj -> C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\bin\Win32\SampleComponents\Debug\SampleComponents.lib
+       FinalizeBuildStatus:
+         Deleting file "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.unsuccessfulbuild".
+         Touching "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\..\obj\Win32\SampleComponents\Debug\SampleComponents.lastbuildstate".
+     1>Done Building Project "C:\Users\Jason\Desktop\Colony-4d610129102df494ef81e31a2ef6c66fafa4c566\SampleComponents\SampleComponents_2010.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:20.00
